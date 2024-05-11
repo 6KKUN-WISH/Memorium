@@ -1,38 +1,220 @@
+
+* {
+  -webkit-tap-highlight-color:rgba(255,255,255,0);
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  touch-action: pan-y; 
+}
+
+body, html, .App, .main .main_content{
+  overscroll-behavior: none  !important; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background-color: #ffffff;
+  font-family: 'Pretendard';
+  letter-spacing: -0.08rem;
+  max-width: 840px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch; /* 異붽� */
+}
+
 .App {
   text-align: center;
+  background-color: #ffffff;
+  overflow-y: auto; /* �ㅽ겕濡ㅼ씠 蹂댁씠�꾨줉 �ㅼ젙 */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (min-width: 840px) {
+  .main_content {
+    position: relative;
+    max-width: 840px;
+    min-height: 100vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  }
+
+  .main_content:before {
+    content: " ";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid;
+    border-color: #d1d6db;
+  }
+
+  .main_content:after {
+    content: " ";
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid;
+    border-color: #d1d6db;
+  }
+
+  div {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainBlock{
+  /* layout */
+
+  width: 59px;
+  height: 19px;
+  flex-shrink: 0;
+
+  background: #F8F9FA;
+
+  /* font */ 
   display: flex;
+  width: 37px;
+  height: 8px;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-shrink: 0;
+
+  color: rgba(0, 0, 0, 0.70);
+  text-align: center;
+  font-family: Inter;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 314.286% */
+  letter-spacing: -0.408px;
 }
 
-.App-link {
-  color: #61dafb;
+.search_bar{
+  /* layout */
+  width: 296px;
+  height: 35px;
+  flex-shrink: 0;
+   
+  border-radius: 50px;
+  border: 1px solid rgba(9, 9, 9, 0.20);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content_box{
+  display: flex;
+  align-items: center;
+}
+
+.sub_title{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-left: 50px;
+
+}
+
+.box_name{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+
+}
+
+.box_time{
+  color: rgba(9, 9, 9, 0.50);
+  font-family: "Pretendard Variable";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.box_content{
+  color: #090909;
+  font-family: "Pretendard Variable";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.main_title{
+   margin-left: 39px;
+    
+   color: #000;
+   font-family: "Pretendard Variable";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+
+
+}
+
+.img_num_count{
+  color: #6D73FF;
+  font-family: "Pretendard Variable";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  display: flex;
+
+  margin-left: 40px;
+}
+
+.start_text{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  text-align: center; /* 텍스트를 가운데 정렬 */
+
+}
+
+.start {
+  transition: opacity 0.5s ease-out; /* 트랜지션 효과 설정 */
+  opacity: 1; /* 초기에는 보이도록 설정 */
+}
+
+.start.hidden {
+  opacity: 0; /* 숨겨지는 효과 */
 }
