@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; // Navigate 추가
 import Main from "./pages/Main";
 import Start from './pages/Start';
+import Login from './pages/Onboarding.js/Login';
+import Vr from './pages/Vr';
 
 function App() {
   const [showStart, setShowStart] = useState(true);
@@ -25,6 +27,9 @@ function App() {
           {/* 기본 경로를 "/"로 설정 */}
           <Route path="/" element={showStart ? <Start /> : <Navigate to="/main" />} />
           <Route path="/main" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/vr" element={<Vr />} />
+
         </Routes>
       </div>
     </Router>

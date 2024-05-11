@@ -218,3 +218,68 @@ a {
 .start.hidden {
   opacity: 0; /* 숨겨지는 효과 */
 }
+
+
+.login_title{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.input_box{
+  display: flex;
+  width: 311px;
+  height: 45px;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: var(--FormLg-FormLgRound, 12px);
+  border: 1px solid var(--Border-default, #E4E4E7);
+  
+  color: #7E7E7E;
+  font-family: "Pretendard Variable";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  text-align: left; /* 플레이스홀더 텍스트 오른쪽 정렬 */
+  padding-left: 25px; /* 플레이스홀더 텍스트와 우측 간격 추가 */
+}
+
+.login_button{
+  display: flex;
+  width: 336px;
+  height: 45px;
+  align-items: center;
+  flex-shrink: 0;
+
+  background-color: #4880EE;
+
+  border-radius: var(--FormLg-FormLgRound, 12px);
+  border: 1px solid var(--Border-default, #E4E4E7);
+
+  color: #FFF;
+  font-family: "Pretendard Variable";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  justify-content: center;
+}
+
+.vr_middle{
+  color: #0F172A;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 200% */
+
+  display: flex;
+  justify-content:center;
+}
